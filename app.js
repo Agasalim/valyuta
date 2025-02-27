@@ -30,6 +30,11 @@ valutaList.forEach(element => {
     currency_list.appendChild(currency);
 });
 secim.onclick = () => {currency_list.classList.toggle("active")};
+document.addEventListener("click", function(event) {
+    if (!currency_list.contains(event.target) && !secim.contains(event.target)) { //əgər istifadəçi nə currency_list-ə, nə də secim-ə klik edibsə, şərt true olacaq.
+        currency_list.classList.remove("active");
+    }
+});
 
 function addCurrency(currencyName){
     let item = valutaList.find(element => element.name==currencyName)
@@ -72,7 +77,6 @@ function delValuta(currency_name){
     viewValyuta.splice(index, 1)
     showValutaView()
 }
-
 function updateValues(changedCurrency, value) { // Misal: changedCurrency=USD, value=100
     let changedItem = viewValyuta.find(element => element.name === changedCurrency);// viewVluta-dan USD-ni tapirirq
     let aznValue = parseFloat(value) * changedItem.exchange; // Tapdigimiz USD-ni(value) AZN-ə çeviririk
