@@ -35,7 +35,7 @@ body {
     font-size: 2.8rem;
     letter-spacing: 5px;
     margin:0 10px;
-    background: linear-gradient(220deg, rgba(64,64,65,1) 88%, rgba(24,172,162,1) 94%, rgba(200,32,45,1) 99%);
+    background: linear-gradient(135deg, rgba(64,64,65,1) 22%, rgba(24,172,162,1) 51%, rgba(200,32,45,1) 94%);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -52,7 +52,7 @@ body {
 .secim:hover {background: #0543a1;}
 .currency_list {
     position: absolute;
-    top: 70px;
+    top: 80px;
     right: 20px;
     width: 300px;
     background: #f0efef;
