@@ -5,39 +5,41 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
+    padding: 0;
 }
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
 }
 #valutaSection {
     position: relative;
-    width: 100%;
+    max-width: 100%;
     margin: 50px 0;
     background: #eee;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .valuta{
     display: flex;
     flex-wrap: wrap;
-    min-height: 80vh;
+    min-height: 60vh;
     height: fit-content;
 }
 .section_head{
-    font-size: 3rem;
+    font-size: 2.8rem;
     letter-spacing: 5px;
-    margin:0 20px;
+    margin:0 10px;
     background: linear-gradient(220deg, rgba(64,64,65,1) 88%, rgba(24,172,162,1) 94%, rgba(200,32,45,1) 99%);
     -webkit-background-clip: text;
     color: transparent;
 }
 .secim {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    width: 130px;
     padding: 12px;
     font-size: 16px;
     border: none;
@@ -47,7 +49,7 @@ body {
     border-radius: 8px;
     transition: 0.3s;
 }
-.secim:hover {background: #0d47a1;}
+.secim:hover {background: #0543a1;}
 .currency_list {
     position: absolute;
     top: 70px;
@@ -131,3 +133,5 @@ input[type="number"]::-webkit-outer-spin-button{
     cursor: pointer;
     padding: 5px;
 }
+@media (max-width:991px) {.container{width: 90%;}}
+@media (max-width:768px) {.valyuta_name{width: 100%;}}
